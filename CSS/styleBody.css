@@ -1,0 +1,811 @@
+*{
+    transition: all 0.1s linear;
+}
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI';
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+#navPartition{
+    background-color: white;
+    height: 4em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navPartition ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    list-style: none;
+}
+#navPartition ul li{
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navPartition ul li a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[alt="navDropdown"]{
+    height: 15px;
+    padding-left: 5px;
+}
+[alt="Search Icon"]{
+    height: 20px;
+    transform: rotateY(180deg);
+    padding-left: 20px;
+}
+[alt="Cart Img"]{
+    height: 20px;
+    padding-left: 5px;
+}
+[alt="Microsoft Logo"]{
+    height: 30px;
+    padding-left: 5px;
+}
+[alt="Shadow"]{
+    height: 40px;
+    padding-left: 5px;
+}
+[alt="navSidebar"]{
+    height: 25px;
+}
+@media screen and (max-width: 1190px){
+    #navPartition.hide1190px{
+        display: none;
+    }
+    #navPartition{
+        width: 90%;
+        justify-content: space-between;
+        margin: auto;
+    }
+    #navPartition [alt="Microsoft Logo"]{
+        height: 20px;
+    }
+    #navPartition ul{
+        gap: 1em;
+    }
+}
+@media screen and (min-width: 1190px){
+    #navPartition.show1190px {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+#bannerSlide1 img{
+    width: 100%;
+    position: relative;
+    bottom:100px;
+    z-index: -10;
+    object-fit: cover;
+    top:5px;
+    object-position: right bottom;
+}
+#whitebox{
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    width: 35%;
+    min-height: 200px;
+    max-height: 280px;
+    max-width: 600px;
+    background-color: white;
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    box-shadow:0em 0em 50px rgba(0, 0, 0, 0.422);
+}
+@media screen and (max-width: 1340px){
+    #whitebox{
+        transition: all 0.2s linear;
+        top: 80px;
+        scale: 0.8;
+    }
+}
+#whitebox h1{
+    font-size: 3em;
+    font-weight: 600;
+}
+#whitebox p{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+#learnmore{
+    border-radius: 2px;
+    background-color: rgb(0, 103, 184);
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 7px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+#bannershifter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position:relative;
+    bottom:80px;
+}
+[alt="previous"]{
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+[alt="next"]{
+    cursor: pointer;
+    transform: rotate(-90deg);
+}
+[alt="pause"]{
+    cursor: pointer;
+}
+.bannerShifterIcons{
+    position: relative;
+    top: 13vh;
+    height: 15px;
+}
+@media screen and (max-width: 1190px){
+    main #banner #bannerSlide1 #sidetext #whitebox{
+        height: 30vh;
+        width: 95vw;
+        max-height: 280px;
+        max-width: 600px;
+        background-color: white;
+        position: absolute;
+        left: 100px;
+    }
+}
+@media screen and (max-width: 1190px){
+    #whitebox{
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap: 2rem;
+        height: 20%;
+        min-width: 100vw;
+        background-color: white;
+        position: absolute;
+        top: 34vh;
+        left:-20px;
+        box-shadow:0em 0em 50px rgba(0, 0, 0, 0.422);
+    }
+    main #banner #bannerSlide1 [alt="Copilot"]{
+        min-height: 28vh;
+        object-fit: cover;
+        top:5px;
+        object-position: right bottom;
+    }
+    main #banner #bannershifter .bannerShifterIcons{
+        z-index: 100;
+        height: 15px;
+        position: relative;
+        top: 24vh;
+    }
+}
+@media screen and (max-width: 1110px){
+    main #banner #bannershifter .bannerShifterIcons{
+        transition: all 0.1s linear;
+        height: 15px;
+        position: relative;
+        top: 26vh;
+    }
+}
+@media screen and (max-width: 1055px){
+    main #banner #bannershifter .bannerShifterIcons{
+        transition: all 0.1s linear;
+        height: 15px;
+        position: relative;
+        top: 26vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    #whitebox{
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap: 2rem;
+        height: 20%;
+        min-width: 100vw;
+        background-color: white;
+        position: absolute;
+        top: 28vh;
+        left:-35px;
+        box-shadow:0em 0em 50px rgba(0, 0, 0, 0.422);
+    }
+    body #banner #bannershifter .bannerShifterIcons{
+        z-index: 100;
+        height: 15px;
+        position: relative;
+        top: 30vh;
+    }
+}
+@media screen and (max-width: 875px){
+    body #banner #bannershifter .bannerShifterIcons{
+        z-index: 100;
+        height: 15px;
+        position: relative;
+        top: 32vh;
+    }
+}
+
+
+
+
+
+
+#belowBanner{
+    position: relative;
+    top: 10vh;
+}
+#belowBannerDiv{
+    margin: auto;
+    width: 55vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.belowBannerElement1{
+    grid-column: 1/2;
+}
+.belowBannerElement2{
+    grid-column: 2/3;
+}
+.belowBannerElement3{
+    grid-column: 3/4;
+}
+.belowBannerElement4{
+    grid-column: 4/5;
+}
+.belowBannerElements{
+    list-style: none;
+    display: contents;
+    text-align: center;
+}
+.belowBannerElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.belowBannerElement img{
+    height: 45px;
+}
+.belowBannerElement a{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(0, 103, 184);
+}
+@media screen and (max-width: 1190px){
+    body main #belowBanner{
+        top: 26vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    body main #belowBanner #belowBannerDiv{
+        margin: auto;
+        width: 55vw;
+        min-width: 150px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+#card1{
+    position: relative;
+    top: 18vh;
+    margin: auto;
+}
+#card1Div{
+    height: auto;
+    min-height: 500px;
+    margin: auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2vw;
+}
+#cardBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.366);
+}
+#cardBox img{
+    position: relative;
+    top:0;
+    width:100%;
+}
+.otherThanImageinCard1{
+    height: 12em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#cardBox h1{
+    font-size: 1.8em;
+    font-weight: 600;
+}
+#cardBox a{
+    border-radius: 2px;
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(0, 103, 184);
+}
+@media screen and (max-width:1300px){
+    #card1{
+        position: relative;
+        top: 30vh;
+        margin: auto;
+    }
+    #card1Div{
+        height: auto;
+        margin: auto;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2vw;
+        row-gap: 2vw;
+    }
+    main #card1 #card1Div #cardBox .otherThanImageinCard1{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+@media screen and (max-width:700px){
+    main #card1 #card1Div #cardBox .otherThanImageinCard1{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    #card1{
+        position: relative;
+        top: 30vh;
+        margin: auto;
+    }
+    #card1Div{
+        height: auto;
+        margin: auto;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 2vw;
+        row-gap: 2vw;
+    }
+}
+
+
+
+
+
+#banner2{
+    position: relative;
+    top: 25vh;
+}
+#macBannerContents img{
+    width: 91%;
+}
+#macBannerContents{
+    display: flex;
+    justify-content: center;
+}
+#macBannerText{
+    position: absolute;
+    top: 10em;
+    left: 18em;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+#macBannerTextTitle{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+#macBannerTextDesc{
+    font-size: 1.1em;
+}
+#macBannerTextButton a{
+    border-radius: 2px;
+    background-color: rgb(0, 103, 184);
+    font-size: 1.2em;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    text-decoration: none;
+}
+[alt="Macbook Banner 2"]{
+    display: none;
+}
+#macBannerText2{
+    display: none;
+}
+@media screen and (max-width:1600px){
+    [alt="Macbook Banner 2"]{
+        display: none;
+    }
+    #macBannerContents img{
+        object-position: center right;
+    }
+    #macBannerText{
+        top: 4em;
+    }
+}
+@media screen and (max-width:1300px){
+    [alt="Macbook Banner 2"]{
+        display: inline;
+        position: relative;
+        top: 10em;
+    }
+    #macBannerText2{
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    min-height: 25%;
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top: 116%;
+    margin: auto;
+    box-shadow:0em 0em 50px rgba(0, 0, 0, 0.197);
+    }
+    #macBannerText2 div{
+        margin-top: 20px;
+    }
+    #macBannerText2 div:last-child{
+        margin-bottom: 30px;
+    }
+    [alt="Macbook Banner"]{
+        display: none;
+    }
+    #macBannerText{
+        display: none;
+    }
+}
+@media screen and (max-width:800px){
+    #macBannerText2{
+        top: 130%;
+    }
+}
+@media screen and (max-width:600px){
+    #macBannerText2{
+        top: 44vh;
+    }
+}
+
+
+
+
+
+
+#card2{
+    position: relative;
+    top: 20vh;
+}
+.forMarginTop{
+    margin-top: 2em;
+}
+@media screen and (max-width: 1300px) {
+    #card2{
+        top: 50vh;
+    }
+}
+@media screen and (max-width: 970px) {
+    #card2{
+        top: 55vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    #card2{
+        top: 70vh;
+    }
+}
+
+
+
+
+
+#socialMedia{
+    position: relative;
+    top: 50vh;
+}
+#socialMediaDiv{
+    display: inline-block;
+    position: relative;
+    left: 5em;
+}
+#socialMediaDiv ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+#socialMediaDiv ul li:first-child{
+    font-size: large;
+    font-weight: 400;
+}
+[alt="Facebook"],[alt="Twitter"],[alt="Youtube"]{
+    height: 40px;
+}
+@media screen and (max-width: 1300px) {
+    #socialMedia{
+        top: 90vh;
+    }
+}
+@media screen and (max-width: 970px) {
+    #socialMedia{
+        top: 100vh;
+    }
+    #socialMediaDiv ul{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    #socialMedia{
+        top: 110vh;
+    }
+    #socialMediaDiv ul{
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+#footbar{
+    background-color: #f2f2f2;
+    position: relative;
+    height: 30em;
+    top: 60vh;
+    width: 100%;
+}
+#footbarDiv{
+    position: relative;
+    top: 2em;
+    height: 26em;
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+}
+.footbarColumn ul,a{
+    color: #616161;
+    list-style: none;
+    text-decoration: none;
+}
+.footbarColumn ul li{
+    margin: 20px;
+    color: #616161;
+    list-style: none;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footbarColumn ul li:first-child{
+    color: #616161;
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+#bottom{
+    position: relative;
+    top: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+#bottom img{
+    height: 25px;
+}
+#bottom ul{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+#bottom ul li a{
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bottom ul li{
+    color: #616161;
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1360px) {
+    #footbar{
+        height: 32em;
+    }
+    #bottom{
+        position: relative;
+        top: 4em;
+    }
+}
+@media screen and (max-width: 1300px) {
+    #footbar{
+        height: 35em;
+        top: 100vh;
+    }
+    #bottom{
+        top: 5em;
+    }
+}
+@media screen and (max-width: 1260px) {
+    #footbar{
+        height: 50em;
+    }
+    #footbarDiv{
+        margin: auto;
+        width: 80%;
+        column-gap: 1em;
+        row-gap: 0px;
+        height: 40em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .footbarColumn ul li{
+        margin: 10px
+    }
+}
+@media screen and (max-width: 1000px) {
+    #footbar{
+        height: 52em;
+    }
+    #bottom{
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+        line-height: 3em;
+    }
+}
+@media screen and (max-width: 660px) {
+    #footbar{
+        height: 66em;
+    }
+    #bottom{
+        gap: 1.5em;
+        line-height:initial;
+    }
+    #bottom ul{
+        line-height: 1em;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 970px) {
+    #footbar{
+        top: 115vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    #socialMediaDiv{
+        transform: scale(0.8);
+        position: relative;
+        left: 0.9em;
+    }
+    #footbar{
+        height: 55em;
+    }
+    #footbarDiv{
+        margin: auto;
+        width: 80%;
+        column-gap: 1em;
+        row-gap: 1em;
+        height: 40em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #footbar{
+        height: 76em;
+        top: 115vh;
+    }
+    #bottom{
+        top: 15em;
+    }
+}
+@media screen and (max-width: 390px) {
+    #socialMediaDiv{
+        transform: scale(0.8);
+        position: relative;
+        left: 1em;
+    }
+    #footbar{
+        height: 94em;
+    }
+    #footbarDiv{
+        margin: auto;
+        width: 80%;
+        row-gap: 1em;
+        height: 40em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #footbar{
+        height: 115em;
+        top: 115vh;
+    }
+    #bottom{
+        top: 53em;
+    }
+    #whitebox{
+        top: 6em;
+        height: fit-content;
+        transform: scale(0.7);
+    }
+    #macBannerText2{
+        width: 28em;
+        transform: scale(0.7);
+    }
+}
